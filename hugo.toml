@@ -3,3 +3,6 @@ languageCode = 'en-us'
 title = 'My New Hugo Site'
 theme = 'book'
 draft = 'false'
+
+[params]
+terminalURL = 'http://localhost:8080'

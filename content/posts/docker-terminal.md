@@ -25,3 +25,14 @@ Podemos utilizar el shortcode `terminal` definido en `layouts/shortcodes/termina
 ```
 
 Esto generará un `<iframe>` que mostrará la terminal en la página.
+
+## Terminal desde el encabezado
+
+Además de incrustar la terminal en un artículo, hemos añadido un botón **Terminal** en la barra superior del sitio. Este botón abre una ventana flotante con la terminal expuesta desde Docker utilizando el archivo `Dockerfile` incluido en el repositorio. Para iniciar el contenedor:
+
+```bash
+docker build -t my-octave-term .
+docker run --rm -p 8080:8080 my-octave-term
+```
+
+Luego simplemente pulsa el botón y se mostrará la terminal en cualquier página.

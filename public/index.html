@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
 <head>
-	<meta name="generator" content="Hugo 0.147.8">
+	<meta name="generator" content="Hugo 0.147.0">
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="">
@@ -16,9 +16,9 @@
 <link rel="icon" href="/favicon.png" >
 <link rel="manifest" href="/manifest.json">
 <link rel="canonical" href="https://example.org/">
-<link rel="stylesheet" href="/book.min.d5e59cb0aa8d22a5813c62cd5e25d3d172489a369c61dc3f622ee96ae1ebb457.css" integrity="sha256-1eWcsKqNIqWBPGLNXiXT0XJImjacYdw/Yi7pauHrtFc=" crossorigin="anonymous">
+<link rel="stylesheet" href="/book.min.b3d8fe8be9e02b729ac017148cfef768901958a61b06dfacc5c048b3c52050e5.css" integrity="sha256-s9j&#43;i&#43;ngK3KawBcUjP73aJAZWKYbBt&#43;sxcBIs8UgUOU=" crossorigin="anonymous">
   <script defer src="/fuse.min.js"></script>
-  <script defer src="/en.search.min.c7e3d787105028212ce57f05c4ed2982e8ba30dd62446919b6a5100259e1580f.js" integrity="sha256-x&#43;PXhxBQKCEs5X8FxO0pgui6MN1iRGkZtqUQAlnhWA8=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.35ecd514c0f4835f81f97149f89f86dbfb23ad7dc60516f96158afce7295e60f.js" integrity="sha256-NezVFMD0g1&#43;B&#43;XFJ&#43;J&#43;G2/sjrX3GBRb5YVivznKV5g8=" crossorigin="anonymous"></script>
 <link rel="alternate" type="application/rss+xml" href="https://example.org/index.xml" title="My New Hugo Site" />
 <!--
 Made with Book Theme
@@ -95,11 +95,14 @@ https://github.com/alex-shpak/hugo-book
 
   <h3>My New Hugo Site</h3>
 
-  <label for="toc-control">
-    
-    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
-    
-  </label>
+  <div class="flex align-center">
+    <button id="open-terminal" class="book-btn" style="margin-right:8px;">Terminal</button>
+    <label for="toc-control">
+      
+      <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+      
+    </label>
+  </div>
 </div>
 
 
@@ -162,7 +165,15 @@ https://github.com/alex-shpak/hugo-book
     
   </main>
 
-  
+  <div id="terminal-modal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.75);z-index:1000;">
+  <div style="position:absolute;top:5%;left:5%;width:90%;height:90%;background:#fff;box-shadow:0 0 10px rgba(0,0,0,0.5);">
+    <button id="close-terminal" class="book-btn" style="float:right;margin:8px;">Cerrar</button>
+    <iframe src="http://localhost:8080" width="100%" height="90%" frameborder="0"></iframe>
+  </div>
+</div>
+
+<script src="/js/terminal.js"></script>
+
 </body>
 </html>
 

@@ -1,0 +1,27 @@
+---
+title: "Terminal Docker"
+date: 2025-06-15T00:00:00-04:00
+draft: false
+---
+
+En esta guía veremos cómo exponer una terminal que se ejecuta dentro de un contenedor Docker y cómo incrustarla en una página generada con Hugo.
+
+## Ejecutar ttyd en Docker
+
+Utilizaremos la imagen [`tsl0922/ttyd`](https://github.com/tsl0922/ttyd) para publicar la terminal vía HTTP:
+
+```bash
+docker run -it --rm -p 7681:7681 tsl0922/ttyd bash
+```
+
+Al ejecutar el comando anterior, la terminal estará disponible en `http://localhost:7681`.
+
+## Incrustar la terminal en Hugo
+
+Podemos utilizar el shortcode `terminal` definido en `layouts/shortcodes/terminal.html`:
+
+```markdown
+{{< terminal url="http://localhost:7681" height="600" >}}
+```
+
+Esto generará un `<iframe>` que mostrará la terminal en la página.

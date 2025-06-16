@@ -10,7 +10,7 @@
 
 Utilizaremos la imagen tsl0922/ttyd para publicar la terminal vía HTTP:
 docker run -it --rm -p 7681:7681 tsl0922/ttyd bash
-Al ejecutar el comando anterior, la terminal estará disponible en http://localhost:7681.
+Al ejecutar el comando anterior, la terminal estará disponible en http://localhost:8080.
 
   Incrustar la terminal en Hugo
   #
@@ -23,7 +23,7 @@ Podemos utilizar el shortcode terminal definido en layouts/shortcodes/terminal.h
   <meta property="og:title" content="Terminal Docker">
   <meta property="og:description" content="En esta guía veremos cómo exponer una terminal que se ejecuta dentro de un contenedor Docker y cómo incrustarla en una página generada con Hugo.
 Ejecutar ttyd en Docker # Utilizaremos la imagen tsl0922/ttyd para publicar la terminal vía HTTP:
-docker run -it --rm -p 7681:7681 tsl0922/ttyd bash Al ejecutar el comando anterior, la terminal estará disponible en http://localhost:7681.
+docker run -it --rm -p 7681:7681 tsl0922/ttyd bash Al ejecutar el comando anterior, la terminal estará disponible en http://localhost:8080.
 Incrustar la terminal en Hugo # Podemos utilizar el shortcode terminal definido en layouts/shortcodes/terminal.html:">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
@@ -169,13 +169,13 @@ https://github.com/alex-shpak/hugo-book
 </h2>
 <p>Utilizaremos la imagen <a href="https://github.com/tsl0922/ttyd"><code>tsl0922/ttyd</code></a> para publicar la terminal vía HTTP:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker run -it --rm -p 7681:7681 tsl0922/ttyd bash
-</span></span></code></pre></div><p>Al ejecutar el comando anterior, la terminal estará disponible en <code>http://localhost:7681</code>.</p>
+</span></span></code></pre></div><p>Al ejecutar el comando anterior, la terminal estará disponible en <code>http://localhost:8080</code>.</p>
 <h2 id="incrustar-la-terminal-en-hugo">
   Incrustar la terminal en Hugo
   <a class="anchor" href="#incrustar-la-terminal-en-hugo">#</a>
 </h2>
 <p>Podemos utilizar el shortcode <code>terminal</code> definido en <code>layouts/shortcodes/terminal.html</code>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><iframe src="http://localhost:7681" width="100%" height="600" frameborder="0" style="border: 1px solid #ccc"></iframe>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><iframe src="http://localhost:8080" width="100%" height="600" frameborder="0" style="border: 1px solid #ccc"></iframe>
 
 </span></span></code></pre></div><p>Esto generará un <code>&lt;iframe&gt;</code> que mostrará la terminal en la página.</p>
 <h2 id="terminal-desde-el-encabezado">

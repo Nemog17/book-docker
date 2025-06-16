@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on My New Hugo Site</title>
-    <link>https://example.org/posts/</link>
+    <link>http://localhost:1313/posts/</link>
     <description>Recent content in Posts on My New Hugo Site</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 15 Jun 2025 00:00:00 -0400</lastBuildDate>
-    <atom:link href="https://example.org/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Terminal Docker</title>
-      <link>https://example.org/posts/docker-terminal/</link>
+      <link>http://localhost:1313/posts/docker-terminal/</link>
       <pubDate>Sun, 15 Jun 2025 00:00:00 -0400</pubDate>
-      <guid>https://example.org/posts/docker-terminal/</guid>
+      <guid>http://localhost:1313/posts/docker-terminal/</guid>
       <description>&lt;p&gt;En esta guía veremos cómo exponer una terminal que se ejecuta dentro de un contenedor Docker y cómo incrustarla en una página generada con Hugo.&lt;/p&gt;&#xA;&lt;h2 id=&#34;ejecutar-ttyd-en-docker&#34;&gt;&#xA;  Ejecutar ttyd en Docker&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#ejecutar-ttyd-en-docker&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Utilizaremos la imagen &lt;a href=&#34;https://github.com/tsl0922/ttyd&#34;&gt;&lt;code&gt;tsl0922/ttyd&lt;/code&gt;&lt;/a&gt; para publicar la terminal vía HTTP:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker run -it --rm -p 7681:7681 tsl0922/ttyd bash&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Al ejecutar el comando anterior, la terminal estará disponible en &lt;code&gt;http://localhost:7681&lt;/code&gt;.&lt;/p&gt;&#xA;&lt;h2 id=&#34;incrustar-la-terminal-en-hugo&#34;&gt;&#xA;  Incrustar la terminal en Hugo&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#incrustar-la-terminal-en-hugo&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Podemos utilizar el shortcode &lt;code&gt;terminal&lt;/code&gt; definido en &lt;code&gt;layouts/shortcodes/terminal.html&lt;/code&gt;:&lt;/p&gt;</description>
     </item>
     <item>
       <title>My First Post</title>
-      <link>https://example.org/posts/my-first-post/</link>
+      <link>http://localhost:1313/posts/my-first-post/</link>
       <pubDate>Sat, 14 Jun 2025 00:27:30 -0400</pubDate>
-      <guid>https://example.org/posts/my-first-post/</guid>
+      <guid>http://localhost:1313/posts/my-first-post/</guid>
       <description></description>
     </item>
   </channel>

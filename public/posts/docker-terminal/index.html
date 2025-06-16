@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="En esta guía veremos cómo exponer una terminal que se ejecuta dentro de un contenedor Docker y cómo incrustarla en una página generada con Hugo.
@@ -18,7 +18,7 @@ Al ejecutar el comando anterior, la terminal estará disponible en http://localh
 Podemos utilizar el shortcode terminal definido en layouts/shortcodes/terminal.html:">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
-<meta name="color-scheme" content="light dark"><meta property="og:url" content="https://example.org/posts/docker-terminal/">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/posts/docker-terminal/">
   <meta property="og:site_name" content="My New Hugo Site">
   <meta property="og:title" content="Terminal Docker">
   <meta property="og:description" content="En esta guía veremos cómo exponer una terminal que se ejecuta dentro de un contenedor Docker y cómo incrustarla en una página generada con Hugo.
@@ -33,10 +33,10 @@ Incrustar la terminal en Hugo # Podemos utilizar el shortcode terminal definido 
 <title>Terminal Docker | My New Hugo Site</title>
 <link rel="icon" href="/favicon.png" >
 <link rel="manifest" href="/manifest.json">
-<link rel="canonical" href="https://example.org/posts/docker-terminal/">
-<link rel="stylesheet" href="/book.min.b3d8fe8be9e02b729ac017148cfef768901958a61b06dfacc5c048b3c52050e5.css" integrity="sha256-s9j&#43;i&#43;ngK3KawBcUjP73aJAZWKYbBt&#43;sxcBIs8UgUOU=" crossorigin="anonymous">
+<link rel="canonical" href="http://localhost:1313/posts/docker-terminal/">
+<link rel="stylesheet" href="/book.min.d5e59cb0aa8d22a5813c62cd5e25d3d172489a369c61dc3f622ee96ae1ebb457.css" integrity="sha256-1eWcsKqNIqWBPGLNXiXT0XJImjacYdw/Yi7pauHrtFc=" crossorigin="anonymous">
   <script defer src="/fuse.min.js"></script>
-  <script defer src="/en.search.min.35ecd514c0f4835f81f97149f89f86dbfb23ad7dc60516f96158afce7295e60f.js" integrity="sha256-NezVFMD0g1&#43;B&#43;XFJ&#43;J&#43;G2/sjrX3GBRb5YVivznKV5g8=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.dd2224404a8d11f326983b88d7b955bf65f4adbb93e3e368a2554072c901dcc3.js" integrity="sha256-3SIkQEqNEfMmmDuI17lVv2X0rbuT4&#43;NoolVAcskB3MM=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -131,6 +131,7 @@ https://github.com/alex-shpak/hugo-book
   <ul>
     <li><a href="#ejecutar-ttyd-en-docker">Ejecutar ttyd en Docker</a></li>
     <li><a href="#incrustar-la-terminal-en-hugo">Incrustar la terminal en Hugo</a></li>
+    <li><a href="#terminal-desde-el-encabezado">Terminal desde el encabezado</a></li>
   </ul>
 </nav>
 
@@ -176,6 +177,14 @@ https://github.com/alex-shpak/hugo-book
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><iframe src="http://localhost:7681" width="100%" height="600" frameborder="0" style="border: 1px solid #ccc"></iframe>
 
 </span></span></code></pre></div><p>Esto generará un <code>&lt;iframe&gt;</code> que mostrará la terminal en la página.</p>
+<h2 id="terminal-desde-el-encabezado">
+  Terminal desde el encabezado
+  <a class="anchor" href="#terminal-desde-el-encabezado">#</a>
+</h2>
+<p>Además de incrustar la terminal en un artículo, hemos añadido un botón <strong>Terminal</strong> en la barra superior del sitio. Este botón abre una ventana flotante con la terminal expuesta desde Docker utilizando el archivo <code>Dockerfile</code> incluido en el repositorio. Para iniciar el contenedor:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker build -t my-octave-term .
+</span></span><span style="display:flex;"><span>docker run --rm -p 8080:8080 my-octave-term
+</span></span></code></pre></div><p>Luego simplemente pulsa el botón y se mostrará la terminal en cualquier página.</p>
 </div>
 </article>
  
@@ -220,6 +229,7 @@ https://github.com/alex-shpak/hugo-book
   <ul>
     <li><a href="#ejecutar-ttyd-en-docker">Ejecutar ttyd en Docker</a></li>
     <li><a href="#incrustar-la-terminal-en-hugo">Incrustar la terminal en Hugo</a></li>
+    <li><a href="#terminal-desde-el-encabezado">Terminal desde el encabezado</a></li>
   </ul>
 </nav>
 

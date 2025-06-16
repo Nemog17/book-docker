@@ -7,6 +7,7 @@
 
   <div class="flex align-center">
     <button id="open-terminal" class="book-btn" style="margin-right:8px;">Terminal</button>
+    <a href="{{ .Site.Params.terminalURL }}" target="_blank" class="book-btn" style="margin-right:8px;">Launch Octave</a>
     <label for="toc-control">
       {{ if default true (default .Site.Params.BookToC .Params.BookToC) }}
       <img src="{{ "svg/toc.svg" | relURL }}" class="book-icon" alt="Table of Contents" />

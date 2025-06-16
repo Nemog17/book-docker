@@ -36,3 +36,7 @@ docker run --rm -p 8080:8080 my-octave-term
 ```
 
 Luego simplemente pulsa el botón y se mostrará la terminal en cualquier página.
+
+Si quieres probarla directamente desde aquí, utiliza el siguiente botón:
+
+<button class="book-btn open-terminal">Abrir terminal</button>

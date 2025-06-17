@@ -1,0 +1,6 @@
+.no-select {
+  user-select: none;
+}
+.terminal-window {
+  cursor: move;
+}

@@ -1,0 +1,20 @@
+{{ define "main" }}
+<article class="markdown book-post">
+  <h1>
+    {{ partial "docs/title.html" . }}
+  </h1>
+  {{ partial "docs/post-meta" . }}
+
+  {{ with .Params.exercise }}
+  <p><a href="{{ $.Site.Params.terminalURL }}/?arg={{ . }}" class="book-btn" onclick="window.open(this.href, '_blank', 'width=1000,height=600'); return false;">Abrir terminal</a></p>
+  {{ end }}
+
+  <div class="book-post-content">
+    {{- .Content -}}
+  </div>
+</article>
+{{ end }}
+
+{{ define "toc" }}
+  {{ partial "docs/toc" . }}
+{{ end }}

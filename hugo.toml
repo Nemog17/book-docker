@@ -5,4 +5,4 @@ theme = 'book'
 draft = 'false'
 
 [params]
-terminalURL = 'http://localhost:8080'
+terminalURL = '$HUGO_TERMINAL_URL'

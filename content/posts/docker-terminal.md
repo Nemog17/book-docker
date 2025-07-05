@@ -2,6 +2,7 @@
 title: "Terminal Docker"
 date: 2025-06-15T00:00:00-04:00
 draft: false
+exercise: Longitud_Tuberia.m
 ---
 
 En esta guía veremos cómo exponer una terminal que se ejecuta dentro de un contenedor Docker y cómo incrustarla en una página generada con Hugo.
@@ -37,6 +38,4 @@ docker run --rm -p 8080:8080 my-octave-term
 
 Luego simplemente pulsa el botón y se mostrará la terminal en cualquier página.
 
-Si quieres probarla directamente desde aquí, utiliza el siguiente botón:
-
-<button class="book-btn open-terminal">Abrir terminal</button>
+Si quieres probarla directamente desde aquí, utiliza el botón que aparece al principio del post.
